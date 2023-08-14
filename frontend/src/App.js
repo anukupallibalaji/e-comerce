@@ -1,8 +1,19 @@
-
-
+import { Container } from "react-bootstrap";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+import Fotter from "./components/Fotter";
+//import Homescreen from "./screens/Homescreen";
 function App() {
   return (
-    <div>from app</div>
+    <>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Fotter />
+    </>
   );
 }
 
